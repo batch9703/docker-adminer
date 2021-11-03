@@ -37,7 +37,7 @@ RUN set -x \
  && chmod -R 755 ${DIR} \
  && \
  : "timezones" \
- && cp /usr/share/zoneinfo/${DC_TZ} /etc/localtime \
+ && cp /usr/share/zoneinfo/${TZ} /etc/localtime \
  && \
  : "end proccess" \
  && apk del -f .build-deps \
@@ -50,4 +50,4 @@ USER dbadmin
 
 EXPOSE 8080
 
-CMD [ "php", "-S", "[::]:8080", "-t", "${DIR}" ]
+CMD [ "php", "-S", "[::]:8080" ]
