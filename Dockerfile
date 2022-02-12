@@ -1,9 +1,9 @@
-FROM alpine:3.14
+FROM alpine:3.15
 
 LABEL maintainer="batch9703"
 
 ARG TZ="Asia/Tokyo"
-ARG php_ver="8.0.12-r0"
+ARG php_ver="8.0.14-r0"
 ARG ad_ver="4.8.1"
 ARG DIR="/opt/dbadmin"
 
