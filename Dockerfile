@@ -3,7 +3,7 @@ FROM alpine:3.15
 LABEL maintainer="batch9703"
 
 ARG TZ="Asia/Tokyo"
-ARG php_ver="8.0.14-r0"
+ARG php_ver="8.1.16-r0"
 ARG ad_ver="4.8.1"
 ARG DIR="/opt/dbadmin"
 
@@ -17,14 +17,14 @@ RUN set -x \
  && \
  : "php" \
  && apk add --no-cache \
-    php8=${php_ver} \
-    php8-opcache=${php_ver} \
-    php8-pdo=${php_ver} \
-    php8-pdo_mysql=${php_ver} \
-    php8-pdo_odbc=${php_ver} \
-    php8-pdo_pgsql=${php_ver} \
-    php8-pdo_sqlite=${php_ver} \
-    php8-session=${php_ver} \
+    php81=${php_ver} \
+    php81-opcache=${php_ver} \
+    php81-pdo=${php_ver} \
+    php81-pdo_mysql=${php_ver} \
+    php81-pdo_odbc=${php_ver} \
+    php81-pdo_pgsql=${php_ver} \
+    php81-pdo_sqlite=${php_ver} \
+    php81-session=${php_ver} \
  && ln -s /usr/bin/php8 /usr/bin/php \
  && \
  : "adminer" \
