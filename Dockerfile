@@ -25,7 +25,6 @@ RUN set -x \
     php81-pdo_pgsql=${php_ver} \
     php81-pdo_sqlite=${php_ver} \
     php81-session=${php_ver} \
- && ln -s /usr/bin/php8 /usr/bin/php \
  && \
  : "adminer" \
  && curl -L https://github.com/vrana/adminer/releases/download/v${ad_ver}/adminer-${ad_ver}-mysql-en.php -o adminer.php \
