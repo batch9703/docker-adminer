@@ -1,9 +1,9 @@
-FROM alpine:3.17
+FROM alpine:3.20
 
 LABEL maintainer="batch9703"
 
 ARG TZ="Asia/Tokyo"
-ARG php_ver="8.1.16-r0"
+ARG php_ver="8.3.13-r0"
 ARG ad_ver="4.8.1"
 ARG DIR="/opt/dbadmin"
 
@@ -17,17 +17,17 @@ RUN set -x \
  && \
  : "php" \
  && apk add --no-cache \
-    php81=${php_ver} \
-    php81-opcache=${php_ver} \
-    php81-pdo=${php_ver} \
-    php81-pdo_mysql=${php_ver} \
-    php81-pdo_odbc=${php_ver} \
-    php81-pdo_pgsql=${php_ver} \
-    php81-pdo_sqlite=${php_ver} \
-    php81-session=${php_ver} \
+    php83=${php_ver} \
+    php83-opcache=${php_ver} \
+    php83-pdo=${php_ver} \
+    php83-pdo_mysql=${php_ver} \
+    php83-pdo_odbc=${php_ver} \
+    php83-pdo_pgsql=${php_ver} \
+    php83-pdo_sqlite=${php_ver} \
+    php83-session=${php_ver} \
  && \
  : "adminer" \
- && curl -L https://github.com/vrana/adminer/releases/download/v${ad_ver}/adminer-${ad_ver}-mysql-en.php -o adminer.php \
+ && curl -L https://github.com/vrana/adminer/releases/download/v${ad_ver}/adminer-${ad_ver}-en.php -o adminer.php \
  && \
  : "permission" \
  && addgroup -S dbadmin \
