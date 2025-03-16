@@ -5,6 +5,9 @@ if (basename($_SERVER['REQUEST_URI']) === 'adminer.css' && is_readable('adminer.
     readfile(__DIR__ . '/adminer.css');
     exit;
 }
+
+require __DIR__ . '/adminer.php';
+
 function adminer_object(): Adminer
 {
     return new class extends Adminer
@@ -55,4 +58,3 @@ function adminer_object(): Adminer
         }
     };
 }
-require __DIR__ . '/adminer.php';
