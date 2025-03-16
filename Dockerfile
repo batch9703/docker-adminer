@@ -2,7 +2,7 @@ FROM alpine:3.21
 
 ARG TZ="Asia/Tokyo"
 ARG php_ver="8.3.18-r0"
-ARG ad_ver="4.17.1"
+ARG ad_ver="5.0.5"
 ARG DIR="/opt/dbadmin"
 
 ENV LANG="ja_JP.UTF-8"
